@@ -1,14 +1,20 @@
 #!/bin/bash
-        echo "Building ec2 instance"
+#creating an ec2 using through awscli and passing user-data script file in user_data field.
+#Defining variable and passing assigning the output of a awscli ec2 run-instances command
 
-        aws ec2 run-instances \
-        --image-id ami-068257025f72f470d \
-        --count 1 \
-        --instance-type t2.micro \
-        --key-name eva-demo-kp \
-        --security-group-ids sg-059130d3ed80d5324 \
-        --subnet-id subnet-0e8281328042b2fa4 \
-        --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=project-demo-2}]' \
+aws_instance="$(aws ec2 run-instances \
+            --image-id ami-06489866022e12a14 \
+            --count 1 \
+            --instance-type t2.micro \
+            --key-name Mary_18-ubuntu_keypair \
+            --subnet-id subnet-0e8281328042b2fa4 \
+            --security-group-ids sg-06bb607ae83ff084f \
+            --user-data file://myuserdatascript1.sh \
+            --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=Marynewinstance1}]')"
 
+echo "created an ec2 instance and passed userdata as bootstrap script."
+created_instance=$(sh describeinstance.sh)
+echo "ec2 instance is $created_instance"
 
-        
+#verify in EC2 management console if ec2 instance is created and connect to ec2 machine and verify it apachee server is installed on this machine.
+               
