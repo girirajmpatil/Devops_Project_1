@@ -11,7 +11,4 @@
         --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=project-demo-2}]' \
 
 
-        instance_id=$(ec2-metadata -v)
-        echo "$instance_id"
-        ip_address=$(ec2-metadata -i)
-        echo "$ip_address"
+        
