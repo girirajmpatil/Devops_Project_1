@@ -1,18 +1,31 @@
 #!/bin/bash
 
-LIST_OF_APPS="git docker.io openjdk-11-jre python3-pip net-tools util-linux"
+# Determine OS platform
 
-echo "$LIST_OF_APPS\n"
+os=`cat /etc/os-release | awk 'NR==1{print $1}'`
 
-sudo apt-get update
-sudo apt-get install -y $LIST_OF_APPS
+echo "$os"
 
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-sudo unzip -o awscliv2.zip
-sudo ./aws/install
+# If ubuntu, 
+# If centos,
 
-curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-sudo apt-get install azure-cli
+if [ $os == ubuntu ];
 
-echo `aws --version`
-echo `az --version`
+then
+      sudo apt-get update
+      sudo apt-get install git
+      sudo apt-get install docker.io
+      sudo apt-get install openjdk-11-jre
+      sudo apt-get install python3-pip
+      sudo apt-get install net-tools
+      sudo apt-get install util-linux
+
+
+else
+      sudo yum update
+      sudo yum install git
+      sudo yum install docker.io
+      sudo yum openjdk-11-jre
+      sudo yum python3-pip
+      sudo yum net-tools
+      sudo yum install util-linux
