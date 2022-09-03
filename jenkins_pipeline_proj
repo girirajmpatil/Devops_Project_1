@@ -18,7 +18,7 @@ pipeline {
             }
             steps {
                     sh '''
-                    git 'https://github.com/girirajmpatil/Devops_Project_1.git'
+                    git url:'https://github.com/girirajmpatil/Devops_Project_1.git'
                     cd Devops_Project_1
                        sh story_1.sh
                        '''
@@ -31,7 +31,7 @@ pipeline {
             }
             steps {
                     sh '''
-                     git 'https://github.com/girirajmpatil/Devops_Project_1.git'
+                     git url:'https://github.com/girirajmpatil/Devops_Project_1.git'
                      cd Devops_Project_1
                      sh story_2.sh
                      '''
@@ -44,7 +44,7 @@ pipeline {
             }
             steps {
                      sh '''
-                    git 'https://github.com/girirajmpatil/Devops_Project_1.git'
+                    git url:'https://github.com/girirajmpatil/Devops_Project_1.git'
                     cd Devops_Project_1
                     sh story_3.sh
                     '''
@@ -73,7 +73,7 @@ pipeline {
             steps {
                   
                    sh '''
-                   git 'https://github.com/girirajmpatil/Devops_Project_1.git'
+                   git url:'https://github.com/girirajmpatil/Devops_Project_1.git'
                    cd Devops_Project_1
                    sh story_6.sh    
                   '''
