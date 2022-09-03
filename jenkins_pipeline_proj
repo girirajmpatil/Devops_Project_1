@@ -17,10 +17,10 @@ pipeline {
                 expression { params.param_choice == 'toolkit_scirpt' }
             }
             steps {
+                    git 'https://github.com/girirajmpatil/Devops_Project_1.git'
                     sh '''
-                    git url:'https://github.com/girirajmpatil/Devops_Project_1.git'
-                    cd Devops_Project_1
-                       sh story_1.sh
+                         cd Devops_Project_1
+                         sh story_1.sh
                        '''
                 
             }
@@ -30,10 +30,10 @@ pipeline {
                 expression { params.param_choice == 'aws_prerequistes' }
             }
             steps {
+                    git 'https://github.com/girirajmpatil/Devops_Project_1.git'
                     sh '''
-                     git url:'https://github.com/girirajmpatil/Devops_Project_1.git'
-                     cd Devops_Project_1
-                     sh story_2.sh
+                        cd Devops_Project_1
+                        sh story_2.sh
                      '''
                 }
         }
@@ -43,10 +43,10 @@ pipeline {
                 expression { params.param_choice == 'aws_buildscript' }
             }
             steps {
-                     sh '''
-                    git url:'https://github.com/girirajmpatil/Devops_Project_1.git'
-                    cd Devops_Project_1
-                    sh story_3.sh
+                    git 'https://github.com/girirajmpatil/Devops_Project_1.git'
+                    sh '''
+                        cd Devops_Project_1
+                        sh story_3.sh
                     '''
             }
         }
@@ -71,12 +71,11 @@ pipeline {
                 expression { params.param_choice == 'apache_installation' }
             }
             steps {
-                  
+                  git 'https://github.com/girirajmpatil/Devops_Project_1.git'
                    sh '''
-                   git url:'https://github.com/girirajmpatil/Devops_Project_1.git'
-                   cd Devops_Project_1
-                   sh story_6.sh    
-                  '''
+                     cd Devops_Project_1
+                     sh story_6.sh    
+                '''
             }
         }
     
