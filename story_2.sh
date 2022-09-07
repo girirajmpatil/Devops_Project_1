@@ -11,7 +11,9 @@ aws --version  # aws-cli/2.7.9 Python/3.9.11 Windows/10 exe/AMD64 prompt/off
 
 #p="~/.aws/credentials"
 
-p="C:\Users\USERNAME\.aws\credentials"
+p="C:\Users\LG's\Desktop\USERNAME\.aws\credentilas"
+
+#p="C:\Users\USERNAME\.aws\credentials"
 
 find -f [.aws\credentials]
 
