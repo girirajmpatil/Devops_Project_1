@@ -21,6 +21,7 @@ touch newcredfile
 
 cat path >> newcredfile
 
+aws configure
 #touch ~/.aws/credentials
 
 if [ -e p ]
