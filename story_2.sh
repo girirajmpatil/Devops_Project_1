@@ -34,8 +34,8 @@ else
 cat $p
 echo "
 [default]
-aws_access_key_id = AKIAQ3NAMZWGLPD5Y4LN
-aws_secret_access_key = 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
+aws_access_key_id = 123456789
+aws_secret_access_key = 123456789
 region = ap-south-1
 output = json" > $p
 
