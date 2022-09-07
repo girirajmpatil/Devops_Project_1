@@ -11,7 +11,7 @@ aws_instance="$(aws ec2 run-instances \
             --security-group-ids sg-06bb607ae83ff084f \
             --user-data file://myuserdatascript1.sh \
             --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=Marynewinstance1}]') \
-            --region ap-south-1"
+            --region-name ap-south-1"
 
 echo "created an ec2 instance and passed userdata as bootstrap script."
 
