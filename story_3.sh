@@ -14,8 +14,14 @@ aws_instance="$(aws ec2 run-instances \
             --region ap-south-1"
 
 echo "created an ec2 instance and passed userdata as bootstrap script."
-created_instance=$(sh describeinstance.sh)
-echo "ec2 instance is $created_instance"
+
+aws ec2 describe-instances \
+    --filters "Name=tag:Name,Values=Marynewinstance1" \
+    --query "Reservations[*].Instances[*].[InstanceId]" \
+    --output text
+
+#created_instance=$(sh describeinstance.sh)
+#echo "ec2 instance is $created_instance"
 
 #verify in EC2 management console if ec2 instance is created and connect to ec2 machine and verify it apachee server is installed on this machine.
                
