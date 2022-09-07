@@ -21,7 +21,7 @@ touch newcredfile
 
 cat path >> newcredfile
 
-aws configure
+
 #touch ~/.aws/credentials
 
 if [ -e p ]
@@ -32,6 +32,7 @@ then
         }
 else
 {
+aws configure
 cat $p
 echo "
 [default]
