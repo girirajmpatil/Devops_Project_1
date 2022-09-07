@@ -46,7 +46,7 @@ pipeline {
                     git 'https://github.com/girirajmpatil/Devops_Project_1.git'
                     sh '''
                         
-                        sh story_3.sh
+                        sh eva_story3.sh
                     '''
             }
         }
