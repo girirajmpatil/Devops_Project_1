@@ -15,7 +15,7 @@ p="C:\Users\LG's\Desktop\USERNAME\.aws\credentilas"
 
 #p="C:\Users\USERNAME\.aws\credentials"
 
-find -f [C:\Users\LG's\Desktop\USERNAME\.aws\credentilas]
+find -f ["C:\Users\LG's\Desktop\USERNAME\.aws\credentilas"]
 
 cat path >> newcredfile
 
